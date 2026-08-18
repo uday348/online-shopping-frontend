@@ -12,10 +12,7 @@ import {
 
 import Navbar from "../components/Navbar";
 
-import {
-    getProductById,
-    updateProduct
-} from "../services/ProductService";
+import { getProductById, updateProduct } from "../services/productService";
 
 function EditProduct() {
 

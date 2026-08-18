@@ -34,10 +34,8 @@ import {
 
 import Navbar from "../components/Navbar";
 
-import {
-    getAllProducts,
-    deleteProduct
-} from "../services/ProductService";
+import { getAllProducts,
+     deleteProduct } from "../services/productService";
 
 import {
     placeOrder
