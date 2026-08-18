@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import Navbar from "../components/Navbar";
-import { addProduct } from "../services/ProductService";
+import { addProduct } from "../services/productService";
 
 function AddProduct() {
 
