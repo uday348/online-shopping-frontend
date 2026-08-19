@@ -2,25 +2,20 @@ import api from "../api/api";
 
 // Get All Products
 export const getAllProducts = async () => {
-
-    const response = await api.get("http://localhost:8004/products");
-
+    const response = await api.get("https://api-gateway-rqt8.onrender.com/products");
     return response.data;
 };
 
 // Get Product By Id
 export const getProductById = async (id) => {
-
-    const response = await api.get(`http://localhost:8004/products/${id}`);
-
+    const response = await api.get(`https://api-gateway-rqt8.onrender.com/products/${id}`);
     return response.data;
 };
 
 // Add Product
 export const addProduct = async (product) => {
-
     const response = await api.post(
-        "http://localhost:8004/products",
+        "https://api-gateway-rqt8.onrender.com/products",
         product
     );
 
@@ -29,9 +24,8 @@ export const addProduct = async (product) => {
 
 // Update Product
 export const updateProduct = async (id, product) => {
-
     const response = await api.put(
-        `http://localhost:8004/products/${id}`,
+        `https://api-gateway-rqt8.onrender.com/products/${id}`,
         product
     );
 
@@ -40,9 +34,8 @@ export const updateProduct = async (id, product) => {
 
 // Delete Product
 export const deleteProduct = async (id) => {
-
     const response = await api.delete(
-        `http://localhost:8004/products/${id}`
+        `https://api-gateway-rqt8.onrender.com/products/${id}`
     );
 
     return response.data;

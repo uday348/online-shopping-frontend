@@ -1,10 +1,11 @@
 import api from "../api/api";
 
+const API_URL = "https://api-gateway-rqt8.onrender.com";
+
 // Register User
 export const registerUser = async (user) => {
-
     const response = await api.post(
-        "http://localhost:8003/users/register",
+        `${API_URL}/users/register`,
         user
     );
 
@@ -13,14 +14,12 @@ export const registerUser = async (user) => {
 
 // Login User
 export const loginUser = async (user) => {
-
     const response = await api.post(
-        "http://localhost:8003/users/login",
+        `${API_URL}/users/login`,
         user
     );
 
     // Save Login Details
-
     localStorage.setItem("userId", response.data.userId);
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("email", response.data.email);
@@ -31,11 +30,8 @@ export const loginUser = async (user) => {
 
 // Logout
 export const logout = () => {
-
     localStorage.removeItem("userId");
     localStorage.removeItem("token");
     localStorage.removeItem("email");
     localStorage.removeItem("role");
-
 };
-
